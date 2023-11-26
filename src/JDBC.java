@@ -25,7 +25,7 @@ public class JDBC {
     private static final String PASSWORD = "Notebook#$1308";
 
     public static void createTable(Connection con) throws SQLException{
-        String createTable = "CREATE TABLE IF NOT EXISTS STUDENTS(NAME VARCHAR(255),REGISTERNUMBER INT,CGPA DOUBLE,AGE INT,ISHOSTELLER BOOLEAN,YEAR INT)";
+        String createTable = "CREATE TABLE IF NOT EXISTS STUDENTS(NAME VARCHAR(255),REGISTERNUMBER INT,CGPA DOUBLE,AGE INT,ISHOSTELLER BOOLEAN,YEAR INT);";
         PreparedStatement preparedStatement = con.prepareStatement(createTable);
         preparedStatement.executeUpdate();
     }
@@ -40,6 +40,14 @@ public class JDBC {
         preparedStatement.setInt(6, s.year);
         preparedStatement.executeUpdate();
     }
+    /*
+    ResultSet resultSet = preparedStatement.executeQuery();
+    while (resultSet.next()) {
+        System.out.println(resultSet.getString("name"));
+    }
+
+     */
+
 
     public static void main(String[] args) throws SQLException {
             Connection connection = DriverManager.getConnection(URL,USER,PASSWORD);

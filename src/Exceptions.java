@@ -1,6 +1,8 @@
 import java.io.IOException;
 import java.util.Scanner;
 
+
+///user defined
 class myfault extends Exception{
     public myfault(String message){
         super(message);
@@ -12,6 +14,7 @@ public class Exceptions {
     public static void main(String[] args)throws IOException{
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
+        //pre defined
         try{
             int a[] = new int[2];
             System.out.println(a[3]);
