@@ -1,7 +1,7 @@
 
 import java.io.*;
 
-public class files1{
+public class files{
     public static void main(String[] args) throws IOException {
         //File Output/Input stream
 //        FileOutputStream F1 = new FileOutputStream("File1.txt");
